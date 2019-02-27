@@ -26,16 +26,15 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 						<tr>
 							<td id="info" class="right">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;24X7
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;24X7
 								Customer Support - Contact us | Home | <%
-									if (session.getAttribute("uname") == null) {
-								%> <a href="login.jsp">Login</a> | <a href="register.jsp">SignUp</a>
+									if (session.getAttribute("email") == null) {
+								%> <a href="Login.jsp">Login</a> | <a href="SignUp.jsp">SignUp</a>
 								<%
 									} else {
-								%> <a href="logout.jsp">Logout</a> <%
- 	}
- %>
+								%> <b>Welcome</b> <b>${user}</b>|<a href="Logout" style="text-decoration: none">&nbsp;Logout</a>
+								 <%}%>
 							</td>
 						</tr>
 					</table>
